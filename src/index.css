@@ -109,3 +109,27 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+
+.tarea-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 12px;
+  background: var(--bg);
+  transition: box-shadow 0.2s;
+}
+.tarea-card:hover {
+  box-shadow: var(--shadow);
+}
+.completada {
+  color: green;
+}
+.pendiente {
+  color: orange;
+}
+.lista-tareas {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+}
