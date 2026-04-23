@@ -1,9 +1,16 @@
-function Header({ pendingCount }) {
+function Header({ pendientes }) {
   return (
-    <header className="app-header">
-      <h1>TaskUPC — Mi Gestor Académico</h1>
-      <p className="pending-badge">📋 Tareas pendientes: {pendingCount}</p>
+    <header
+      style={{
+        backgroundColor: "#282c34",
+        color: "white",
+        padding: "1rem",
+        textAlign: "center",
+      }}
+    >
+      <h1>📚 TaskUPC — Mi Gestor Académico</h1>
+      <p>Tareas pendientes: {pendientes}</p>
     </header>
   );
 }
-export default Header; // ←
+export default Header;

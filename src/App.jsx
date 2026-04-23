@@ -1,17 +1,30 @@
-// src/App.jsx
-import { useState } from "react";
-import { tareasIniciales } from "./data/tarea";
-import Header from "./components/Header";
-import ListaTareas from "./components/ListaTareas";
+import { Routes, Route, Link } from "react-router-dom";
+import Inicio from "./pages/Inicio";
+import NuevaTarea from "./pages/NuevaTarea";
+import DetalleTarea from "./pages/DetalleTarea";
 
 function App() {
-  const [tareas] = useState(tareasIniciales);
-  const pendingCount = tareas.filter((t) => !t.completada).length;
-
   return (
     <div>
-      <Header pendingCount={pendingCount} />
-      <ListaTareas />
+      <nav
+        style={{
+          background: "#282c34",
+          padding: "0.5rem",
+          textAlign: "center",
+        }}
+      >
+        <Link to="/" style={{ color: "white", margin: "0 10px" }}>
+          Inicio
+        </Link>
+        <Link to="/nueva" style={{ color: "white", margin: "0 10px" }}>
+          ➕ Nueva tarea
+        </Link>
+      </nav>
+      <Routes>
+        <Route path="/" element={<Inicio />} />
+        <Route path="/nueva" element={<NuevaTarea />} />
+        <Route path="/tarea/:id" element={<DetalleTarea />} />
+      </Routes>
     </div>
   );
 }

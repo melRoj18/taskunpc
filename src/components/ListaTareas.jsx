@@ -1,12 +1,13 @@
-import { tareasIniciales } from "../data/tarea";
 import TareaCard from "./TareaCard";
 
-function ListaTareas() {
+function ListaTareas({ tareas }) {
   return (
-    <div className="lista-tareas">
-      {tareasIniciales.map((tarea) => (
-        <TareaCard key={tarea.id} {...tarea} />
-      ))}
+    <div>
+      {tareas.length === 0 ? (
+        <p>No hay tareas para mostrar.</p>
+      ) : (
+        tareas.map((tarea) => <TareaCard key={tarea.id} {...tarea} />)
+      )}
     </div>
   );
 }

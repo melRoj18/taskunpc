@@ -1,4 +1,3 @@
-// src/data/tareas.js
 export const tareasIniciales = [
   {
     id: 1,
@@ -16,23 +15,23 @@ export const tareasIniciales = [
   },
   {
     id: 3,
-    titulo: "Proyecto de React",
+    titulo: "Entrega de proyecto",
     materia: "Programación",
-    fecha: "2025-05-12",
+    fecha: "2025-05-15",
     completada: false,
   },
   {
     id: 4,
-    titulo: "Presentación oral",
-    materia: "Inglés",
-    fecha: "2025-05-09",
-    completada: false,
+    titulo: "Leer capítulo 3",
+    materia: "Literatura",
+    fecha: "2025-05-05",
+    completada: true,
   },
   {
     id: 5,
-    titulo: "Entrega de ejercicios",
-    materia: "Álgebra Lineal",
-    fecha: "2025-05-11",
+    titulo: "Ejercicios de álgebra",
+    materia: "Matemáticas",
+    fecha: "2025-05-12",
     completada: false,
   },
 ];
